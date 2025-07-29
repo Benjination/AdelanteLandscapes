@@ -4,8 +4,8 @@ email: cbeesley1717@gmail.com
 description: >-
   Designing beautiful landscapes for your home, business, or community.
   Specializing in edible landscaping, sustainable design, and naturalistic gardens.
-baseurl: "/AdelanteLandscapes"
-url: "https://benjination.github.io"
+baseurl: ""
+url: "https://benjination.github.io/AdelanteLandscapes"
 
 # Build settings
 markdown: kramdown
