@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adelante Landscapes - Enhanced Design Preview</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* ===== CSS Variables ===== */
+    :root {
+      --primary-color: #2d5016;
+      --secondary-color: #7fb069;
+      --accent-color: #d4ac2b;
+      --text-color: #333;
+      --text-light: #666;
+      --background-color: #fff;
+      --light-gray: #f8f9fa;
+      --border-color: #e0e0e0;
+      
+      --font-primary: 'Playfair Display', serif;
+      --font-secondary: 'Open Sans', sans-serif;
+      
+      --shadow: 0 4px 20px rgba(0,0,0,0.1);
+      --shadow-hover: 0 8px 30px rgba(0,0,0,0.15);
+      --transition: all 0.3s ease;
+      --border-radius: 12px;
+    }
+
+    /* ===== Reset & Base Styles ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-secondary);
+      line-height: 1.6;
+      color: var(--text-color);
+      background-color: var(--background-color);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* ===== Typography ===== */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-primary);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2.5rem; }
+    h3 { font-size: 2rem; }
+
+    /* ===== Layout ===== */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ===== Navigation ===== */
+    .navbar {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 1rem 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      box-shadow: var(--shadow);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: var(--font-primary);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-color);
+    }
+
+    /* ===== Hero Section ===== */
+    .hero-section {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+      margin-top: 80px;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(rgba(45, 80, 22, 0.7), rgba(45, 80, 22, 0.7)),
+                  url('./assets/images/hero-bg.jpg') center/cover;
+      z-index: -1;
+    }
+
+    .hero-content h1 {
+      font-size: 5rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      font-weight: 700;
+      letter-spacing: -2px;
+      animation: fadeInUp 1s ease;
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 3rem;
+      max-width: 800px;
+      font-weight: 300;
+      line-height: 1.6;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+      animation: fadeInUp 1s ease 0.3s both;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeInUp 1s ease 0.6s both;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===== Buttons ===== */
+    .btn {
+      display: inline-block;
+      padding: 18px 36px;
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      text-align: center;
+      transition: var(--transition);
+      border: 2px solid transparent;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 1.1rem;
+      box-shadow: var(--shadow);
+      transform: translateY(0);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    .btn-primary {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--secondary-color);
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .btn-secondary {
+      background-color: var(--accent-color);
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background-color: #b8941f;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    /* ===== Sections ===== */
+    section {
+      padding: 6rem 0;
+    }
+
+    section:nth-child(even) {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 4rem;
+      color: var(--primary-color);
+      font-size: 3.2rem;
+      position: relative;
+    }
+
+    section h2::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+      margin: 1.5rem auto;
+      border-radius: 2px;
+    }
+
+    /* ===== Services Grid ===== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .service-item {
+      background: white;
+      padding: 3rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: var(--transition);
+      border: 1px solid var(--border-color);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .service-item:hover::before {
+      transform: scaleX(1);
+    }
+
+    .service-item:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--secondary-color);
+    }
+
+    .service-item h3 {
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      font-size: 1.6rem;
+    }
+
+    .service-item p {
+      color: var(--text-light);
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+
+    /* ===== Portfolio Preview ===== */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2.5rem;
+      margin: 3rem 0;
+    }
+
+    .portfolio-item {
+      position: relative;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      background: #f0f0f0;
+      aspect-ratio: 4/3;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(45, 80, 22, 0.9));
+      color: white;
+      padding: 2rem;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-item:hover .portfolio-overlay {
+      transform: translateY(0);
+    }
+
+    .portfolio-overlay h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.4rem;
+    }
+
+    /* ===== Text Center ===== */
+    .text-center {
+      text-align: center;
+    }
+
+    /* ===== About Section ===== */
+    .about-flex {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      flex-wrap: wrap;
+    }
+
+    .about-content, .about-image {
+      flex: 1;
+      min-width: 350px;
+    }
+
+    .about-image img {
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      width: 100%;
+      max-width: 450px;
+      transition: var(--transition);
+    }
+
+    .about-image img:hover {
+      transform: scale(1.03);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .about-content h3 {
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      font-size: 2.2rem;
+    }
+
+    .about-content p {
+      margin-bottom: 1.5rem;
+      color: var(--text-light);
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .hero-content h1 {
+        font-size: 3.2rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.3rem;
+      }
+      
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .hero-buttons .btn {
+        width: 280px;
+      }
+      
+      section h2 {
+        font-size: 2.5rem;
+      }
+      
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .about-flex {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-container">
+        <a href="#" class="logo">Adelante Landscapes</a>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero-section" id="home">
+    <div class="hero-content">
+      <h1>Adelante Landscapes</h1>
+      <p class="hero-subtitle">Designing beautiful landscapes for your home, business, or community. Specializing in edible landscaping, sustainable design, and naturalistic gardens that thrive in Texas.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">Schedule a Consultation</a>
+        <a href="tel:469-688-9998" class="btn btn-secondary">Call: 469-688-9998</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Section -->
+  <section class="services-preview" id="services">
+    <div class="container">
+      <h2>Our Signature Services</h2>
+      <div class="services-grid">
+        <div class="service-item">
+          <h3>🍃 Edible Landscaping</h3>
+          <p>Transform your outdoor space into a productive paradise with beautiful gardens that feed your family while enhancing your property's visual appeal and value.</p>
+        </div>
+        <div class="service-item">
+          <h3>🌱 Sustainable Design</h3>
+          <p>Create environmentally responsible landscapes that conserve water, support local wildlife, and reduce maintenance while delivering stunning year-round beauty.</p>
+        </div>
+        <div class="service-item">
+          <h3>🌿 Naturalistic Gardens</h3>
+          <p>Design native plant communities that attract beneficial wildlife, require minimal water, and provide authentic Texas landscape character that thrives naturally.</p>
+        </div>
+        <div class="service-item">
+          <h3>🏡 Modern Landscapes</h3>
+          <p>Craft clean, contemporary outdoor spaces that complement modern architecture with sophisticated plant selections and innovative hardscape elements.</p>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top: 4rem;">
+        <a href="#services" class="btn btn-primary">Explore All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Preview -->
+  <section class="portfolio-preview" id="portfolio">
+    <div class="container">
+      <h2>Recent Projects</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <div class="portfolio-overlay">
+            <h3>Modern Edible Garden</h3>
+            <p>Contemporary design with productive vegetables</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <div class="portfolio-overlay">
+            <h3>Native Texas Landscape</h3>
+            <p>Drought-resistant naturalistic design</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <div class="portfolio-overlay">
+            <h3>Sustainable Family Garden</h3>
+            <p>Eco-friendly landscape with food production</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="#portfolio" class="btn btn-primary">View Complete Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-preview" id="about">
+    <div class="container">
+      <h2>Master Designer & Author</h2>
+      <div class="about-flex">
+        <div class="about-image">
+          <img src="./assets/images/CherylProfilePic.jpeg" alt="Cheryl Beesley - Master Landscape Designer">
+        </div>
+        <div class="about-content">
+          <h3>Cheryl Beesley</h3>
+          <p><strong>30+ Years of Excellence</strong> - Cheryl brings unmatched expertise to every landscape design project. As a certified landscape designer and author of "Landscaping with Edible Plants in Texas," she combines artistic vision with practical Texas gardening knowledge.</p>
+          <p><strong>Texas Native Expertise</strong> - Born and raised in Texas, Cheryl understands our unique climate, soil conditions, and native plant palette better than anyone. Her designs work with nature, not against it.</p>
+          <p><strong>Award-Winning Designs</strong> - From intimate backyard gardens to large commercial landscapes, Cheryl's work has been featured in regional publications and has transformed hundreds of Texas properties.</p>
+          <a href="#about" class="btn btn-primary">Learn More About Cheryl</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); color: white; text-align: center;" id="contact">
+    <div class="container">
+      <h2 style="color: white;">Ready to Transform Your Landscape?</h2>
+      <p style="font-size: 1.3rem; margin-bottom: 3rem; color: rgba(255,255,255,0.9);">Let's create the outdoor space of your dreams together</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-secondary">Get Your Free Consultation</a>
+        <a href="tel:469-688-9998" class="btn" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white;">Call: 469-688-9998</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
