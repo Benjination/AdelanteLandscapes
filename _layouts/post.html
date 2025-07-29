@@ -1,0 +1,79 @@
+---
+layout: default
+---
+
+<article class="blog-post">
+  <div class="container">
+    <header class="post-header">
+      <div class="post-meta">
+        <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span>
+        {% if page.categories %}
+          <span class="post-categories">
+            {% for category in page.categories %}
+              <span class="category-tag">{{ category | replace: '-', ' ' | capitalize }}</span>
+            {% endfor %}
+          </span>
+        {% endif %}
+      </div>
+      
+      <h1 class="post-title">{{ page.title }}</h1>
+      
+      {% if page.series %}
+        <p class="post-series">Part of: {{ page.series }}</p>
+      {% endif %}
+      
+      {% if page.featured_image %}
+        <div class="post-featured-image">
+          <img src="{{ page.featured_image }}" alt="{{ page.title }}">
+        </div>
+      {% endif %}
+    </header>
+    
+    <div class="post-content">
+      {{ content }}
+    </div>
+    
+    <footer class="post-footer">
+      <div class="post-navigation">
+        {% if page.previous.url %}
+          <div class="nav-previous">
+            <a href="{{ page.previous.url }}">&larr; {{ page.previous.title | truncate: 50 }}</a>
+          </div>
+        {% endif %}
+        
+        {% if page.next.url %}
+          <div class="nav-next">
+            <a href="{{ page.next.url }}">{{ page.next.title | truncate: 50 }} &rarr;</a>
+          </div>
+        {% endif %}
+      </div>
+      
+      <div class="post-share">
+        <h3>Share This Article</h3>
+        <div class="share-buttons">
+          <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" target="_blank" rel="noopener" class="share-btn facebook">Facebook</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url }}" target="_blank" rel="noopener" class="share-btn linkedin">LinkedIn</a>
+          <a href="mailto:?subject={{ page.title }}&body=Check out this article: {{ page.url | absolute_url }}" class="share-btn email">Email</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</article>
+
+<section class="related-posts">
+  <div class="container">
+    <h2>Related Articles</h2>
+    <div class="related-grid">
+      {% assign related_posts = site.posts | where_exp: "post", "post.url != page.url" | limit: 3 %}
+      {% for post in related_posts %}
+        <article class="related-card">
+          {% if post.featured_image %}
+            <img src="{{ post.featured_image }}" alt="{{ post.title }}">
+          {% endif %}
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <p class="related-date">{{ post.date | date: "%B %d, %Y" }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

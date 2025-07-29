@@ -1,0 +1,66 @@
+# Site settings
+title: Adelante Landscapes
+email: cbeesley1717@gmail.com
+description: >-
+  Designing beautiful landscapes for your home, business, or community.
+  Specializing in edible landscaping, sustainable design, and naturalistic gardens.
+baseurl: ""
+url: "https://adelantelandscapes.com"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:year/:month/:day/:title/
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /portfolio/:name/
+
+# Plugin settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# Site data
+author:
+  name: Cheryl Beesley
+  bio: >-
+    Landscape designer and visionary with over 30 years of experience.
+    Master's degree in landscape architecture with focus in horticulture
+    and environmental sustainability.
+  phone: (682)225-3486
+  location: Fort Worth, Texas 76112
+
+# Social links
+social:
+  facebook: https://www.facebook.com/adelantelandscape
+  linkedin: https://www.linkedin.com/in/cheryl-beesley-399125a4/
+
+# Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Services
+    url: /services/
+  - title: Portfolio
+    url: /portfolio/
+  - title: Blog
+    url: /blog/
+  - title: Contact
+    url: /contact/
