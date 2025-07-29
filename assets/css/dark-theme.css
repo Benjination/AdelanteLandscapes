@@ -10,9 +10,9 @@
   --dark-brown: #3e1c00;
   --very-dark-brown: #3e1c00;
   --cream: #3e1c00;
-  --light-text: #ffffff;
-  --text-color: #ffffff;
-  --text-light: #ffffff;
+  --light-text: #B2D8B2;
+  --text-color: #B2D8B2;
+  --text-light: #B2D8B2;
   --background-color: #3e1c00;
   --card-background: #3e1c00;
   --light-gray: #3e1c00;
@@ -50,12 +50,12 @@ section, .site-header, .hero-section, .service-item, .blog-card, .portfolio-filt
 
 /* Force all text to white */
 body, p, h1, h2, h3, h4, h5, h6, span, div, a, li {
-  color: #ffffff !important;
+  color: #B2D8B2 !important;
 }
 
 /* Navigation specific */
 .nav-link {
-  color: #ffffff !important;
+  color: #B2D8B2 !important;
 }
 
 .nav-link:hover {
@@ -65,10 +65,101 @@ body, p, h1, h2, h3, h4, h5, h6, span, div, a, li {
 /* Buttons */
 .btn-primary {
   background-color: #7fb069 !important;
-  color: #ffffff !important;
+  color: #000000 !important;
 }
 
 .btn-secondary {
   background-color: #d4ac2b !important;
-  color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Footer - Low contrast fix */
+.site-footer {
+  background-color: #7fb069 !important;
+}
+
+.site-footer, 
+.site-footer p, 
+.site-footer h1, 
+.site-footer h2, 
+.site-footer h3, 
+.site-footer h4, 
+.site-footer h5, 
+.site-footer h6, 
+.site-footer span, 
+.site-footer div, 
+.site-footer a, 
+.site-footer li {
+  color: #000000 !important;
+}
+
+.site-footer a:hover {
+  color: #333333 !important;
+}
+
+/* Buttons with green backgrounds need black text */
+.btn-outline:hover {
+  background-color: #7fb069 !important;
+  color: #000000 !important;
+}
+
+/* Any element with green background should have black text */
+*[style*="background-color: #7fb069"],
+*[style*="background: #7fb069"] {
+  color: #000000 !important;
+}
+
+/* Hero section and CTA sections with green backgrounds */
+.hero-section, 
+.cta-section, 
+.portfolio-cta, 
+.blog-cta {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+}
+
+.hero-section, 
+.hero-section p, 
+.hero-section h1, 
+.hero-section h2, 
+.hero-section h3, 
+.hero-section h4, 
+.hero-section h5, 
+.hero-section h6, 
+.hero-section span, 
+.hero-section div, 
+.hero-section a, 
+.cta-section, 
+.cta-section p, 
+.cta-section h1, 
+.cta-section h2, 
+.cta-section h3, 
+.cta-section h4, 
+.cta-section h5, 
+.cta-section h6, 
+.cta-section span, 
+.cta-section div, 
+.cta-section a, 
+.portfolio-cta, 
+.portfolio-cta p, 
+.portfolio-cta h1, 
+.portfolio-cta h2, 
+.portfolio-cta h3, 
+.portfolio-cta h4, 
+.portfolio-cta h5, 
+.portfolio-cta h6, 
+.portfolio-cta span, 
+.portfolio-cta div, 
+.portfolio-cta a, 
+.blog-cta, 
+.blog-cta p, 
+.blog-cta h1, 
+.blog-cta h2, 
+.blog-cta h3, 
+.blog-cta h4, 
+.blog-cta h5, 
+.blog-cta h6, 
+.blog-cta span, 
+.blog-cta div, 
+.blog-cta a {
+  color: #000000 !important;
 }

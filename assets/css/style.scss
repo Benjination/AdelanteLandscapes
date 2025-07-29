@@ -12,9 +12,9 @@
   --dark-brown: #3e1c00;
   --very-dark-brown: #3e1c00;
   --cream: #3e1c00;
-  --light-text: #ffffff;
+  --light-text: #B2D8B2;
   --text-color: var(--light-text);
-  --text-light: #ffffff;
+  --text-light: #B2D8B2;
   --background-color: var(--dark-brown);
   --card-background: var(--dark-brown);
   --light-gray: var(--warm-brown);
@@ -168,22 +168,22 @@ p {
 
 .btn-primary {
   background-color: var(--primary-color);
-  color: white;
+  color: #B2D8B2;
 }
 
 .btn-primary:hover {
   background-color: var(--secondary-color);
-  color: white;
+  color: #B2D8B2;
 }
 
 .btn-secondary {
   background-color: var(--accent-color);
-  color: white;
+  color: #B2D8B2;
 }
 
 .btn-secondary:hover {
   background-color: #b8941f;
-  color: white;
+  color: #B2D8B2;
 }
 
 .btn-outline {
@@ -194,7 +194,7 @@ p {
 
 .btn-outline:hover {
   background-color: var(--primary-color);
-  color: white;
+  color: #B2D8B2;
 }
 
 /* ===== Form Styles ===== */
@@ -609,7 +609,7 @@ section h2::after {
   left: 0;
   right: 0;
   background: linear-gradient(transparent, rgba(0,0,0,0.8));
-  color: white;
+  color: #B2D8B2;
   padding: 2rem;
   transform: translateY(100%);
   transition: var(--transition);
@@ -653,7 +653,7 @@ section h2::after {
 /* ===== Footer ===== */
 .site-footer {
   background-color: var(--primary-color);
-  color: white;
+  color: #B2D8B2;
   padding: 3rem 0 1rem;
 }
 
@@ -678,7 +678,7 @@ section h2::after {
 }
 
 .footer-section a {
-  color: white;
+  color: #B2D8B2;
   transition: var(--transition);
 }
 
@@ -720,7 +720,7 @@ section h2::after {
               var(--light-gray);
   padding: 4rem 0 2rem;
   text-align: center;
-  color: white;
+  color: #B2D8B2;
 }
 
 .page-subtitle {
@@ -783,7 +783,7 @@ section h2::after {
 .filter-btn:hover,
 .filter-btn.active {
   background-color: var(--primary-color);
-  color: white;
+  color: #B2D8B2;
   border-color: var(--primary-color);
 }
 
@@ -846,7 +846,7 @@ section h2::after {
 
 .category-tag {
   background-color: var(--secondary-color);
-  color: white;
+  color: #B2D8B2;
   padding: 0.2rem 0.5rem;
   border-radius: 15px;
   font-size: 0.8rem;
@@ -992,7 +992,7 @@ section h2::after {
 .share-btn {
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  color: white;
+  color: #B2D8B2;
   text-decoration: none;
   font-size: 0.9rem;
 }
@@ -1054,13 +1054,13 @@ section h2::after {
 .portfolio-cta,
 .blog-cta {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: white;
+  color: #B2D8B2;
   padding: 4rem 0;
   text-align: center;
 }
 
 .cta-content h2 {
-  color: white;
+  color: #B2D8B2;
   margin-bottom: 1rem;
 }
 
