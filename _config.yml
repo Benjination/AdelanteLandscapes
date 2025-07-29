@@ -16,7 +16,6 @@ permalink: /blog/:year/:month/:day/:title/
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-seo-tag
 
 # GitHub Pages settings
 remote_theme: null
@@ -33,7 +32,12 @@ exclude:
   - vendor/ruby/
   - local-*.html
   - README.md
-  - "*.old.html"
+  - "*-old.html"
+  - about-old.html
+  - blog-old.html
+  - contact-old.html
+  - portfolio-old.html
+  - services-old.html
 
 # Include files
 include:
