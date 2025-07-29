@@ -1,0 +1,128 @@
+---
+layout: default
+title: Contact Us
+description: Get in touch with Adelante Landscapes for a free consultation. Serving Fort Worth, Texas and surrounding areas.
+---
+
+<div class="page-header">
+  <div class="container">
+    <h1>{{ page.title }}</h1>
+    <p class="page-subtitle">Let's bring your landscape vision to life</p>
+  </div>
+</div>
+
+<section class="contact-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Get a Free Consultation</h2>
+        <p>We stay in constant communication with our customers until the job is done. To get a free quote, or if you have questions or special requests, just drop us a line.</p>
+        
+        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          
+          <div class="form-group">
+            <label for="property-type">Property Type</label>
+            <select id="property-type" name="property-type">
+              <option value="">Select Property Type</option>
+              <option value="residential">Residential</option>
+              <option value="commercial">Commercial</option>
+              <option value="community">Community/HOA</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="services">Services Interested In</label>
+            <div class="checkbox-group">
+              <label><input type="checkbox" name="services" value="edible"> Edible Landscaping</label>
+              <label><input type="checkbox" name="services" value="sustainable"> Sustainable Design</label>
+              <label><input type="checkbox" name="services" value="installation"> Installation & Maintenance</label>
+              <label><input type="checkbox" name="services" value="consultation"> Design Consultation</label>
+              <label><input type="checkbox" name="services" value="workshop"> Workshop/Presentation</label>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Project Description *</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project, budget range, timeline, and any specific requirements..."></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="contact-info">
+          <h2>Contact Information</h2>
+          
+          <div class="contact-item">
+            <h3>Adelante Landscapes</h3>
+            <p>{{ site.author.location }}</p>
+          </div>
+          
+          <div class="contact-item">
+            <h3>Phone</h3>
+            <p><a href="tel:{{ site.author.phone }}">{{ site.author.phone }}</a></p>
+          </div>
+          
+          <div class="contact-item">
+            <h3>Email</h3>
+            <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+          </div>
+          
+          <div class="contact-item">
+            <h3>Business Hours</h3>
+            <p>Monday - Friday: 9:00 AM - 5:00 PM<br>
+            Saturday: By Appointment<br>
+            Sunday: Closed</p>
+          </div>
+          
+          <div class="contact-item">
+            <h3>Service Areas</h3>
+            <p>Fort Worth and surrounding areas including:</p>
+            <ul>
+              <li>Dallas-Fort Worth Metroplex</li>
+              <li>Tarrant County</li>
+              <li>Denton County</li>
+              <li>Parker County</li>
+            </ul>
+          </div>
+          
+          <div class="social-contact">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+              <a href="{{ site.social.facebook }}" target="_blank" rel="noopener">Facebook</a>
+              <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to Transform Your Outdoor Space?</h2>
+      <p>Contact us today for a free consultation and let's discuss how we can create a beautiful, sustainable landscape for your property.</p>
+      <div class="cta-buttons">
+        <a href="tel:{{ site.author.phone }}" class="btn btn-primary">Call Now</a>
+        <a href="mailto:{{ site.email }}" class="btn btn-secondary">Email Us</a>
+      </div>
+    </div>
+  </div>
+</section>

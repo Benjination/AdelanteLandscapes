@@ -1,72 +1,227 @@
 ---
 layout: default
-title: Blog
+title: Blog & Insights
 description: Read our latest insights on edible landscaping, sustainable gardening, and landscape design tips for North Texas gardens.
 ---
 
+<!-- Page Header -->
 <div class="page-header">
   <div class="container">
-    <h1>{{ page.title }}</h1>
-    <p class="page-subtitle">Insights on edible landscaping and sustainable gardening</p>
+    <h1>Blog & Insights</h1>
+    <p class="page-subtitle">Expert advice on edible landscaping and sustainable gardening in Texas</p>
   </div>
 </div>
 
-<section class="blog-listing">
+<!-- Blog Introduction -->
+<section class="blog-intro">
   <div class="container">
-    <div class="blog-grid">
-      {% for post in site.posts %}
-        <article class="blog-card">
-          {% if post.featured_image %}
-            <div class="blog-image">
-              <img src="{{ post.featured_image }}" alt="{{ post.title }}">
-            </div>
-          {% endif %}
-          
-          <div class="blog-content">
-            <div class="blog-meta">
-              <span class="blog-date">{{ post.date | date: "%B %d, %Y" }}</span>
-              {% if post.categories %}
-                <span class="blog-categories">
-                  {% for category in post.categories %}
-                    <span class="category-tag">{{ category | replace: '-', ' ' | capitalize }}</span>
-                  {% endfor %}
-                </span>
-              {% endif %}
-            </div>
-            
-            <h2 class="blog-title">
-              <a href="{{ post.url }}">{{ post.title }}</a>
-            </h2>
-            
-            {% if post.series %}
-              <p class="blog-series">Part of: {{ post.series }}</p>
-            {% endif %}
-            
-            <p class="blog-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
-            
-            <a href="{{ post.url }}" class="read-more">Read Full Article →</a>
-          </div>
-        </article>
-      {% endfor %}
-    </div>
-    
-    {% if site.posts.size == 0 %}
-      <div class="no-posts">
-        <h2>Coming Soon!</h2>
-        <p>We're working on bringing you valuable insights about edible landscaping and sustainable gardening. Check back soon for our latest articles.</p>
+    <div class="row">
+      <div class="col-md-8">
+        <h2>Learn from 30+ Years of Experience</h2>
+        <p class="lead">Discover practical tips, seasonal advice, and design inspiration for creating beautiful, productive landscapes that thrive in the Texas climate.</p>
       </div>
-    {% endif %}
+      <div class="col-md-4">
+        <div class="blog-subscribe" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2rem; border-radius: 15px;">
+          <h4>Stay Updated</h4>
+          <p>Get our latest gardening tips and design insights delivered to your inbox.</p>
+          <a href="{{ '/contact.html' | relative_url }}" class="btn btn-primary">Subscribe to Updates</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="blog-cta">
+<!-- Featured Articles -->
+<section class="featured-articles">
+  <div class="container">
+    <h2>Featured Articles</h2>
+    <div class="blog-grid">
+      
+      <!-- Featured Article 1 -->
+      <article class="blog-card featured">
+        <div class="blog-image">
+          <img src="{{ '/assets/images/portfolio/Edible Gardens/Tomato.jpg' | relative_url }}" alt="Growing Tomatoes in Texas">
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span class="blog-date">March 15, 2024</span>
+            <span class="category-tag">Edible Gardening</span>
+          </div>
+          <h3>The Ultimate Guide to Growing Tomatoes in North Texas</h3>
+          <p>Learn the secrets to growing abundant, flavorful tomatoes in the challenging Texas climate. From variety selection to seasonal care tips.</p>
+          <a href="#" class="read-more">Read Full Article →</a>
+        </div>
+      </article>
+      
+      <!-- Featured Article 2 -->
+      <article class="blog-card">
+        <div class="blog-image">
+          <img src="{{ '/assets/images/portfolio/Naturalistic/DryCreek1.JPG' | relative_url }}" alt="Water-Wise Landscaping">
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span class="blog-date">February 28, 2024</span>
+            <span class="category-tag">Sustainable Design</span>
+          </div>
+          <h3>Creating Water-Wise Landscapes That Thrive</h3>
+          <p>Discover how to design beautiful landscapes that conserve water and reduce maintenance while providing year-round interest.</p>
+          <a href="#" class="read-more">Read Full Article →</a>
+        </div>
+      </article>
+      
+      <!-- Featured Article 3 -->
+      <article class="blog-card">
+        <div class="blog-image">
+          <img src="{{ '/assets/images/portfolio/Edible Gardens/Lavender.jpeg' | relative_url }}" alt="Native Plants Texas">
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span class="blog-date">February 10, 2024</span>
+            <span class="category-tag">Native Plants</span>
+          </div>
+          <h3>Top 10 Native Texas Plants for Every Garden</h3>
+          <p>Essential native plants that provide beauty, support wildlife, and thrive in Texas conditions with minimal care.</p>
+          <a href="#" class="read-more">Read Full Article →</a>
+        </div>
+      </article>
+      
+    </div>
+  </div>
+</section>
+
+<!-- Blog Categories -->
+<section class="blog-categories" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 4rem 0;">
+  <div class="container">
+    <h2>Explore by Topic</h2>
+    <div class="category-grid">
+      <div class="category-item">
+        <h3>🍅 Edible Landscaping</h3>
+        <p>Growing food in beautiful landscape designs</p>
+        <ul>
+          <li>Vegetable garden planning</li>
+          <li>Fruit tree care</li>
+          <li>Herb garden design</li>
+          <li>Seasonal planting guides</li>
+        </ul>
+      </div>
+      
+      <div class="category-item">
+        <h3>🌱 Sustainable Gardening</h3>
+        <p>Eco-friendly practices for healthy gardens</p>
+        <ul>
+          <li>Water conservation</li>
+          <li>Soil health</li>
+          <li>Natural pest control</li>
+          <li>Composting tips</li>
+        </ul>
+      </div>
+      
+      <div class="category-item">
+        <h3>🌵 Native Plants</h3>
+        <p>Texas natives for beautiful, low-maintenance landscapes</p>
+        <ul>
+          <li>Plant selection guides</li>
+          <li>Wildlife benefits</li>
+          <li>Seasonal care</li>
+          <li>Design inspiration</li>
+        </ul>
+      </div>
+      
+      <div class="category-item">
+        <h3>🎨 Design Inspiration</h3>
+        <p>Ideas and trends for stunning outdoor spaces</p>
+        <ul>
+          <li>Modern landscape trends</li>
+          <li>Color combinations</li>
+          <li>Layout planning</li>
+          <li>Problem-solving designs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Recent Articles -->
+<section class="recent-articles">
+  <div class="container">
+    <h2>Recent Articles</h2>
+    <div class="article-list">
+      
+      <article class="article-summary">
+        <div class="article-meta">
+          <span class="date">March 1, 2024</span>
+          <span class="category">Seasonal Care</span>
+        </div>
+        <h3><a href="#">Spring Garden Preparation: A Texas Checklist</a></h3>
+        <p>Essential tasks to prepare your garden for the growing season, from soil preparation to plant selection.</p>
+      </article>
+      
+      <article class="article-summary">
+        <div class="article-meta">
+          <span class="date">February 15, 2024</span>
+          <span class="category">Problem Solving</span>
+        </div>
+        <h3><a href="#">Dealing with Clay Soil: Solutions for North Texas Gardens</a></h3>
+        <p>Practical strategies for improving clay soil and selecting plants that thrive in heavy soil conditions.</p>
+      </article>
+      
+      <article class="article-summary">
+        <div class="article-meta">
+          <span class="date">January 30, 2024</span>
+          <span class="category">Design</span>
+        </div>
+        <h3><a href="#">Creating Year-Round Interest in Your Landscape</a></h3>
+        <p>Design strategies for ensuring your garden looks beautiful through all four seasons in Texas.</p>
+      </article>
+      
+      <article class="article-summary">
+        <div class="article-meta">
+          <span class="date">January 15, 2024</span>
+          <span class="category">Edible Gardens</span>
+        </div>
+        <h3><a href="#">Winter Vegetables That Thrive in Texas</a></h3>
+        <p>Extend your growing season with cold-hardy vegetables perfect for Texas winter gardens.</p>
+      </article>
+      
+      <article class="article-summary">
+        <div class="article-meta">
+          <span class="date">December 20, 2023</span>
+          <span class="category">Maintenance</span>
+        </div>
+        <h3><a href="#">Winter Garden Care: Protecting Your Plants</a></h3>
+        <p>Essential winter care tips to keep your landscape healthy through the colder months.</p>
+      </article>
+      
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter Signup -->
+<section class="newsletter-signup">
+  <div class="container">
+    <div class="newsletter-content">
+      <div class="row">
+        <div class="col-md-8">
+          <h2>Never Miss Our Latest Tips</h2>
+          <p>Subscribe to receive seasonal gardening advice, design inspiration, and exclusive insights from Cheryl's 30+ years of experience.</p>
+        </div>
+        <div class="col-md-4">
+          <a href="{{ '/contact.html' | relative_url }}" class="btn btn-secondary">Join Our Community</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
   <div class="container">
     <div class="cta-content">
-      <h2>Want to Stay Updated?</h2>
-      <p>Follow us on social media for the latest tips, seasonal advice, and project updates from Adelante Landscapes.</p>
-      <div class="social-links">
-        <a href="{{ site.social.facebook }}" target="_blank" rel="noopener" class="btn btn-secondary">Facebook</a>
-        <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn</a>
+      <h2>Ready to Apply These Ideas to Your Garden?</h2>
+      <p>Let's schedule a consultation to discuss how these concepts can work in your specific landscape.</p>
+      <div class="cta-buttons">
+        <a href="{{ '/contact.html' | relative_url }}" class="btn btn-secondary">Schedule Consultation</a>
+        <a href="{{ '/services.html' | relative_url }}" class="btn" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white;">Our Services</a>
       </div>
     </div>
   </div>
