@@ -5,17 +5,22 @@
   --primary-color: #2d5016;
   --secondary-color: #7fb069;
   --accent-color: #d4ac2b;
+  --earth-brown: #8b4513;
+  --warm-brown: #a0522d;
+  --light-brown: #ddbea9;
+  --cream: #f5f1eb;
   --text-color: #333;
   --text-light: #666;
-  --background-color: #fff;
+  --background-color: var(--cream);
+  --card-background: #f7f3ed;
   --light-gray: #f8f9fa;
   --border-color: #e0e0e0;
   
   --font-primary: 'Playfair Display', serif;
   --font-secondary: 'Open Sans', sans-serif;
   
-  --shadow: 0 4px 20px rgba(0,0,0,0.1);
-  --shadow-hover: 0 8px 30px rgba(0,0,0,0.15);
+  --shadow: 0 4px 20px rgba(139, 69, 19, 0.15);
+  --shadow-hover: 0 8px 30px rgba(139, 69, 19, 0.25);
   --transition: all 0.3s ease;
   --border-radius: 12px;
 }
