@@ -32,12 +32,6 @@ exclude:
   - vendor/ruby/
   - local-*.html
   - README.md
-  - "*-old.html"
-  - about-old.html
-  - blog-old.html
-  - contact-old.html
-  - portfolio-old.html
-  - services-old.html
 
 # Include files
 include:
