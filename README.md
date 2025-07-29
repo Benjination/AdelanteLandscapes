@@ -1,6 +1,65 @@
 # Adelante Landscapes Website
 
-Professional landscape design website for Adelante Landscapes featuring responsive Jekyll design, edible landscaping portfolio, and sustainable gardening blog. Built for GitHub Pages deployment with custom domain support.
+Professional landscape design website built with Jekyll.
+
+## 🚀 Quick Start for Local Development
+
+**Never worry about broken CSS again!** Use this simple command:
+
+```bash
+./start-local.sh
+```
+
+This script:
+- ✅ Builds the site with correct local paths
+- ✅ Starts the server on http://localhost:4005
+- ✅ Ensures CSS and images work properly
+- ✅ Cleans up any existing processes
+
+## 📤 Deploying to GitHub Pages
+
+When you're ready to publish changes:
+
+```bash
+./deploy.sh
+```
+
+This script:
+- ✅ Builds with production settings
+- ✅ Commits and pushes to GitHub
+- ✅ Deploys to https://benjination.github.io/AdelanteLandscapes/
+
+## 🔧 Manual Commands (if needed)
+
+### Local Development
+```bash
+# Build with local config (no baseurl issues)
+bundle exec jekyll build --config _config.yml,_config_local.yml
+
+# Start local server
+cd _site && ruby -run -e httpd . -p 4005
+```
+
+### Production Build
+```bash
+# Build with GitHub Pages config
+bundle exec jekyll build --config _config.yml
+```
+
+## 🐛 Troubleshooting
+
+### CSS Not Loading?
+- **Always use** `./start-local.sh` for local development
+- **Never** build with just `jekyll build` for local testing
+- The baseurl in `_config.yml` is for GitHub Pages only
+
+### Forms Not Working?
+- Forms use Formspree with IDs: `xwpknowr` (consultation) and `xoqgqogr` (contact)
+- Forms send to both: `cbeesley1717@gmail.com` and `Benjination2@gmail.com`
+
+### Server Won't Start?
+- Check if port 4005 is in use: `lsof -i :4005`
+- Kill existing processes: `pkill -f ruby.*httpd`
 
 ## About Adelante Landscapes
 

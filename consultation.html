@@ -81,7 +81,12 @@ description: Professional landscape design consultation for $75. Get expert reco
               Ready to get professional guidance for your landscape project? Fill out this form to schedule your $75 design consultation.
             </p>
             
-            <form class="consultation-booking-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <form class="consultation-booking-form" action="https://formspree.io/f/xwpknowr" method="POST">
+              <!-- Hidden fields for multiple recipients -->
+              <input type="hidden" name="_cc" value="Benjination2@gmail.com">
+              <input type="hidden" name="_subject" value="Design Consultation Request - $75">
+              <input type="hidden" name="_next" value="{{ site.url }}{{ site.baseurl }}/thank-you/">
+              
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
