@@ -2,28 +2,28 @@
 ---
 /* ===== CSS Variables ===== */
 :root {
-  --primary-color: #2d5016;
-  --secondary-color: #7fb069;
-  --accent-color: #d4ac2b;
-  --earth-brown: #8b4513;
-  --warm-brown: #a0522d;
-  --light-brown: #ddbea9;
-  --dark-brown: #3d2914;
-  --very-dark-brown: #2a1b0f;
-  --cream: #f5f1eb;
-  --light-text: #f0f0f0;
+  --primary-color: #7fb069;
+  --secondary-color: #d4ac2b;
+  --accent-color: #7fb069;
+  --earth-brown: #3e1c00;
+  --warm-brown: #3e1c00;
+  --light-brown: #3e1c00;
+  --dark-brown: #3e1c00;
+  --very-dark-brown: #3e1c00;
+  --cream: #3e1c00;
+  --light-text: #ffffff;
   --text-color: var(--light-text);
-  --text-light: #d0d0d0;
+  --text-light: #ffffff;
   --background-color: var(--dark-brown);
-  --card-background: var(--very-dark-brown);
+  --card-background: var(--dark-brown);
   --light-gray: var(--warm-brown);
-  --border-color: #6b4226;
+  --border-color: #7fb069;
   
   --font-primary: 'Playfair Display', serif;
   --font-secondary: 'Open Sans', sans-serif;
   
-  --shadow: 0 4px 20px rgba(139, 69, 19, 0.15);
-  --shadow-hover: 0 8px 30px rgba(139, 69, 19, 0.25);
+  --shadow: 0 4px 20px rgba(62, 28, 0, 0.15);
+  --shadow-hover: 0 8px 30px rgba(62, 28, 0, 0.25);
   --transition: all 0.3s ease;
   --border-radius: 12px;
 }
@@ -215,7 +215,7 @@ p {
   padding: 0.75rem 1rem;
   border: 2px solid var(--border-color);
   border-radius: 8px;
-  background-color: var(--very-dark-brown);
+  background-color: #654321;
   color: var(--light-text);
   font-size: 1rem;
   transition: var(--transition);
@@ -239,7 +239,7 @@ p {
 .faq-item {
   margin-bottom: 2rem;
   padding: 1.5rem;
-  background: var(--card-background);
+  background: #654321;
   border-radius: 10px;
   box-shadow: var(--shadow);
 }
@@ -256,7 +256,7 @@ p {
 
 /* ===== Header & Navigation ===== */
 .site-header {
-  background-color: var(--dark-brown);
+  background-color: #654321;
   box-shadow: var(--shadow);
   position: sticky;
   top: 0;
@@ -332,7 +332,7 @@ p {
 /* ===== Hero Section ===== */
 .hero,
 .hero-section {
-  background: linear-gradient(135deg, var(--dark-brown) 0%, var(--very-dark-brown) 100%);
+  background-color: #654321;
   padding: 6rem 0;
   display: flex;
   align-items: center;
@@ -473,23 +473,23 @@ p {
 /* ===== Sections ===== */
 section {
   padding: 6rem 0;
-  background-color: var(--background-color);
+  background-color: #654321;
 }
 
 .services-preview {
-  background: linear-gradient(135deg, var(--very-dark-brown) 0%, var(--dark-brown) 100%);
+  background-color: #654321;
 }
 
 .portfolio-preview {
-  background: linear-gradient(135deg, var(--dark-brown) 0%, var(--very-dark-brown) 100%);
+  background-color: #654321;
 }
 
 .blog-preview {
-  background: linear-gradient(135deg, var(--very-dark-brown) 0%, var(--dark-brown) 100%);
+  background-color: #654321;
 }
 
 section:nth-child(even) {
-  background: linear-gradient(135deg, var(--very-dark-brown) 0%, var(--dark-brown) 100%);
+  background-color: #654321;
 }
 
 section h2 {
@@ -537,7 +537,7 @@ section h2::after {
 }
 
 .service-item {
-  background: var(--card-background);
+  background: #654321;
   padding: 3rem;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
@@ -758,7 +758,7 @@ section h2::after {
 /* ===== Portfolio Filtering ===== */
 .portfolio-filter {
   padding: 2rem 0;
-  background-color: var(--very-dark-brown);
+  background-color: #654321;
 }
 
 .filter-buttons {
@@ -769,7 +769,7 @@ section h2::after {
 }
 
 .filter-btn {
-  background: var(--card-background);
+  background: #654321;
   border: 2px solid var(--border-color);
   padding: 0.5rem 1rem;
   border-radius: 25px;
@@ -792,7 +792,7 @@ section h2::after {
 }
 
 .blog-card {
-  background: var(--card-background);
+  background: #654321;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -1002,7 +1002,7 @@ section h2::after {
 
 /* ===== Related Posts ===== */
 .related-posts {
-  background-color: var(--very-dark-brown);
+  background-color: #654321;
   padding: 4rem 0;
 }
 
@@ -1014,7 +1014,7 @@ section h2::after {
 }
 
 .related-card {
-  background: var(--card-background);
+  background: #654321;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -1116,7 +1116,7 @@ section h2::after {
     top: 100%;
     left: 0;
     right: 0;
-    background-color: var(--dark-brown);
+    background-color: #654321;
     box-shadow: var(--shadow);
   }
   
