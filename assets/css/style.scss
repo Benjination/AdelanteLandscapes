@@ -1,3 +1,5 @@
+---
+---
 /* ===== CSS Variables ===== */
 :root {
   --primary-color: #2d5016;
@@ -282,7 +284,7 @@ p {
   right: 0;
   bottom: 0;
   background: linear-gradient(rgba(45, 80, 22, 0.7), rgba(45, 80, 22, 0.7)),
-              url('/AdelanteLandscapes/assets/images/hero-bg.jpg') center/cover;
+              url('{{ site.baseurl }}/assets/images/hero-bg.jpg') center/cover;
   z-index: -1;
 }
 
