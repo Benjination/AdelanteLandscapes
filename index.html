@@ -2,93 +2,125 @@
 layout: default
 ---
 
-<div class="hero-section">
-  <div class="hero-content">
-    <h1>{{ site.title }}</h1>
-    <p class="hero-subtitle">{{ site.description }}</p>
-    <div class="hero-buttons">
-      <a href="/contact/" class="btn btn-primary">Schedule a Consultation</a>
-      <a href="tel:{{ site.author.phone }}" class="btn btn-secondary">{{ site.author.phone }}</a>
-    </div>
-  </div>
-</div>
-
-<section class="about-preview">
+<!-- Hero Section -->
+<section class="hero">
   <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <img src="{{ '/assets/images/CherylProfilePic.jpeg' | relative_url }}" alt="Cheryl Beesley" class="founder-image">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Transform Your Outdoor Space with <span class="highlight">Adelante Landscapes</span></h1>
+        <p class="hero-subtitle">Creating beautiful, sustainable landscapes in North Texas for over 30 years. Specializing in edible gardens, native plants, and eco-friendly design.</p>
+        <div class="hero-buttons">
+          <a href="{{ '/contact.html' | relative_url }}" class="btn btn-primary">Schedule Consultation</a>
+          <a href="{{ '/portfolio.html' | relative_url }}" class="btn btn-secondary">View Our Work</a>
+        </div>
       </div>
-      <div class="col-md-6">
-        <h2>Our Founder</h2>
-        <p>{{ site.author.bio }}</p>
-        <p>As a native Texan, Cheryl has a deep understanding of the region's unique plant palette, 
-        climate, and soil conditions, which she skillfully incorporates into a diverse range of 
-        designs spanning modern, natural, and sustainable styles.</p>
-        <a href="/about/" class="btn btn-outline">Learn More</a>
+      <div class="hero-image">
+        <img src="{{ '/assets/images/CherylProfilePic.jpeg' | relative_url }}" alt="Cheryl Beesley, Landscape Designer" class="profile-pic">
       </div>
     </div>
   </div>
 </section>
 
+<!-- Services Grid -->
 <section class="services-preview">
   <div class="container">
-    <h2>Our Services</h2>
+    <h2>Our Specialized Services</h2>
     <div class="services-grid">
       <div class="service-item">
-        <h3>Edible Landscaping</h3>
-        <p>Beautiful gardens that produce food for your family.</p>
+        <img src="{{ '/assets/images/portfolio/Edible Gardens/Tomato.jpg' | relative_url }}" alt="Edible Landscaping">
+        <h3>🌱 Edible Landscaping</h3>
+        <p>Transform your yard into a productive paradise with beautiful edible plants that provide fresh food year-round.</p>
+        <a href="{{ '/services.html' | relative_url }}" class="service-link">Learn More →</a>
       </div>
       <div class="service-item">
-        <h3>Sustainable Design</h3>
-        <p>Environmentally responsible landscapes that conserve resources.</p>
+        <img src="{{ '/assets/images/portfolio/Modern/Austin1.JPG' | relative_url }}" alt="Modern Design">
+        <h3>🏡 Modern Design</h3>
+        <p>Clean, contemporary landscapes that complement modern architecture with sophisticated plant selections.</p>
+        <a href="{{ '/services.html' | relative_url }}" class="service-link">Learn More →</a>
       </div>
       <div class="service-item">
-        <h3>Naturalistic Gardens</h3>
-        <p>Native plant communities that support local wildlife.</p>
+        <img src="{{ '/assets/images/portfolio/Naturalistic/DryCreek1.JPG' | relative_url }}" alt="Naturalistic Gardens">
+        <h3>🌿 Naturalistic Gardens</h3>
+        <p>Authentic Texas landscapes using native plants that thrive naturally and support local wildlife.</p>
+        <a href="{{ '/services.html' | relative_url }}" class="service-link">Learn More →</a>
       </div>
       <div class="service-item">
-        <h3>Modern Landscapes</h3>
-        <p>Clean, contemporary designs for modern living.</p>
+        <img src="{{ '/assets/images/portfolio/Garden/Strawberry.jpg' | relative_url }}" alt="Sustainable Design">
+        <h3>♻️ Sustainable Design</h3>
+        <p>Environmentally responsible landscapes that conserve water and reduce maintenance while creating beauty.</p>
+        <a href="{{ '/services.html' | relative_url }}" class="service-link">Learn More →</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Portfolio Preview -->
 <section class="portfolio-preview">
   <div class="container">
     <h2>Recent Projects</h2>
     <div class="portfolio-grid">
-      {% for project in site.projects limit:6 %}
-        <div class="portfolio-item">
-          <a href="{{ project.url }}">
-            <img src="{{ project.featured_image }}" alt="{{ project.title }}">
-            <div class="portfolio-overlay">
-              <h3>{{ project.title }}</h3>
-              <p>{{ project.category }}</p>
-            </div>
-          </a>
+      <div class="portfolio-item">
+        <img src="{{ '/assets/images/portfolio/Edible Gardens/SwissChard.jpg' | relative_url }}" alt="Edible Garden Project">
+        <div class="portfolio-overlay">
+          <h3>Productive Edible Garden</h3>
+          <p>Beautiful vegetables and herbs</p>
         </div>
-      {% endfor %}
+      </div>
+      <div class="portfolio-item">
+        <img src="{{ '/assets/images/portfolio/Modern/Austin3.JPG' | relative_url }}" alt="Modern Landscape">
+        <div class="portfolio-overlay">
+          <h3>Contemporary Design</h3>
+          <p>Clean lines and modern materials</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="{{ '/assets/images/portfolio/Naturalistic/CourtyardGarden.jpeg' | relative_url }}" alt="Native Garden">
+        <div class="portfolio-overlay">
+          <h3>Native Plant Garden</h3>
+          <p>Drought-tolerant and wildlife-friendly</p>
+        </div>
+      </div>
     </div>
-    <div class="text-center">
-      <a href="/portfolio/" class="btn btn-primary">View All Projects</a>
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="{{ '/portfolio.html' | relative_url }}" class="btn btn-primary">View All Projects</a>
     </div>
   </div>
 </section>
 
+<!-- Blog Preview -->
 <section class="blog-preview">
   <div class="container">
-    <h2>Latest from Our Blog</h2>
+    <h2>Latest Garden Wisdom</h2>
     <div class="blog-grid">
-      {% for post in site.posts limit:3 %}
-        <article class="blog-card">
-          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-          <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
-          <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
-          <a href="{{ post.url }}" class="read-more">Read More</a>
-        </article>
-      {% endfor %}
+      <article class="blog-post">
+        <img src="{{ '/assets/images/portfolio/Edible Gardens/Strawberries with Mustard 1.JPG' | relative_url }}" alt="Garden Blog">
+        <h3>Strawberries and Asparagus: Perfect Companions</h3>
+        <p>Discover why these perennials make ideal garden partners and how to integrate them beautifully...</p>
+        <a href="{{ '/blog.html' | relative_url }}" class="read-more">Read More →</a>
+      </article>
+      <article class="blog-post">
+        <img src="{{ '/assets/images/portfolio/Garden/Weeds.jpg' | relative_url }}" alt="Garden Care">
+        <h3>Understanding Weeds in Your Garden</h3>
+        <p>Not all weeds are bad! Learn to identify beneficial plants and manage unwanted growth organically...</p>
+        <a href="{{ '/blog.html' | relative_url }}" class="read-more">Read More →</a>
+      </article>
+    </div>
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="{{ '/blog.html' | relative_url }}" class="btn btn-secondary">Read All Posts</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to Transform Your Outdoor Space?</h2>
+      <p>Let's create a beautiful, sustainable landscape that reflects your vision and thrives in Texas.</p>
+      <div class="cta-buttons">
+        <a href="{{ '/contact.html' | relative_url }}" class="btn btn-secondary">Get Started Today</a>
+        <a href="tel:469-688-9998" class="btn" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white;">Call Now</a>
+      </div>
     </div>
   </div>
 </section>
