@@ -5,14 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  {% seo %}
+  <title>{% if page.title %}{{ page.title | escape }} - {% endif %}{{ site.title | escape }}</title>
+  <meta name="description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
   
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
@@ -23,8 +20,8 @@
     <nav class="navbar">
       <div class="container">
         <div class="navbar-brand">
-          <a href="/">
-            <img src="/assets/images/Logo.jpg" alt="{{ site.title }}" class="logo">
+          <a href="{{ '/' | relative_url }}">
+            <img src="{{ '/assets/images/Logo.jpg' | relative_url }}" alt="{{ site.title }}" class="logo">
             <span class="site-title">{{ site.title }}</span>
           </a>
         </div>
