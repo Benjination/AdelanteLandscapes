@@ -8,7 +8,7 @@
   <title>{% if page.title %}{{ page.title | escape }} - {% endif %}{{ site.title | escape }}</title>
   <meta name="description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   
   <!-- Google Fonts -->
@@ -20,30 +20,30 @@
     <nav class="navbar">
       <div class="container">
         <div class="navbar-brand">
-          <a href="{{ '/' | relative_url }}">
-            <img src="{{ '/assets/images/Logo.jpg' | relative_url }}" alt="{{ site.title }}" class="logo">
+          <a href="{{ site.baseurl }}/">
+            <img src="{{ site.baseurl }}/assets/images/Logo.jpg" alt="{{ site.title }}" class="logo">
             <span class="site-title">{{ site.title }}</span>
           </a>
         </div>
         
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}active{% endif %}">Home</a>
+            <a href="{{ site.baseurl }}/" class="nav-link {% if page.url == '/' %}active{% endif %}">Home</a>
           </li>
           <li class="nav-item">
-            <a href="{{ '/services.html' | relative_url }}" class="nav-link {% if page.url contains 'services' %}active{% endif %}">Services</a>
+            <a href="{{ site.baseurl }}/services.html" class="nav-link {% if page.url contains 'services' %}active{% endif %}">Services</a>
           </li>
           <li class="nav-item">
-            <a href="{{ '/portfolio.html' | relative_url }}" class="nav-link {% if page.url contains 'portfolio' %}active{% endif %}">Portfolio</a>
+            <a href="{{ site.baseurl }}/portfolio.html" class="nav-link {% if page.url contains 'portfolio' %}active{% endif %}">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a href="{{ '/about.html' | relative_url }}" class="nav-link {% if page.url contains 'about' %}active{% endif %}">About</a>
+            <a href="{{ site.baseurl }}/about.html" class="nav-link {% if page.url contains 'about' %}active{% endif %}">About</a>
           </li>
           <li class="nav-item">
-            <a href="{{ '/blog.html' | relative_url }}" class="nav-link {% if page.url contains 'blog' %}active{% endif %}">Blog</a>
+            <a href="{{ site.baseurl }}/blog.html" class="nav-link {% if page.url contains 'blog' %}active{% endif %}">Blog</a>
           </li>
           <li class="nav-item">
-            <a href="{{ '/contact.html' | relative_url }}" class="nav-link {% if page.url contains 'contact' %}active{% endif %}">Contact</a>
+            <a href="{{ site.baseurl }}/contact.html" class="nav-link {% if page.url contains 'contact' %}active{% endif %}">Contact</a>
           </li>
         </ul>
       </div>
