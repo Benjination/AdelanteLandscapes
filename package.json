@@ -1,0 +1,28 @@
+{
+  "name": "adelante-landscapes",
+  "version": "1.0.0",
+  "description": "Adelante Landscapes website - Professional landscape design services in North Texas",
+  "main": "local-index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 8080 --directory .",
+    "start": "python3 -m http.server 8080 --directory .",
+    "build": "echo 'Build complete - static site ready for deployment'",
+    "serve": "python3 -m http.server 8080 --directory .",
+    "preview": "python3 -c \"import webbrowser; webbrowser.open('http://localhost:8080/local-index.html')\""
+  },
+  "keywords": [
+    "landscape-design",
+    "edible-landscaping",
+    "sustainable-design",
+    "texas-landscaping",
+    "native-plants"
+  ],
+  "author": "Cheryl Beesley - Adelante Landscapes",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Benjination/AdelanteLandscapes.git"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}
