@@ -1,5 +1,4 @@
 # Site settings
-# Site settings
 title: Adelante Landscapes
 email: cbeesley1717@gmail.com
 description: >-
@@ -13,6 +12,16 @@ markdown: kramdown
 highlighter: rouge
 permalink: /blog/:year/:month/:day/:title/
 
+# Plugins - only use GitHub Pages supported plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# GitHub Pages settings
+remote_theme: null
+theme: null
+
 # Exclude files from processing
 exclude:
   - Gemfile
@@ -23,25 +32,12 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - local-*.html
+  - README.md
+  - "*.old.html"
 
 # Include files
 include:
   - _pages
-
-# Plugins - only use GitHub Pages supported plugins
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
-
-# Build settings
-markdown: kramdown
-highlighter: rouge
-permalink: /blog/:year/:month/:day/:title/
-
-# GitHub Pages settings
-remote_theme: null
-theme: null
 
 # Defaults
 defaults:
@@ -61,23 +57,6 @@ collections:
     output: true
     permalink: /portfolio/:name/
 
-# Plugin settings
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
-
-# Exclude from processing
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - README.md
-
 # Site data
 author:
   name: Cheryl Beesley
@@ -93,17 +72,17 @@ social:
   facebook: https://www.facebook.com/adelantelandscape
   linkedin: https://www.linkedin.com/in/cheryl-beesley-399125a4/
 
-# Navigation
+# Navigation - Updated to match actual file structure
 navigation:
   - title: Home
     url: /
   - title: About
-    url: /about/
+    url: /about.html
   - title: Services
-    url: /services/
+    url: /services.html
   - title: Portfolio
-    url: /portfolio/
+    url: /portfolio.html
   - title: Blog
-    url: /blog/
+    url: /blog.html
   - title: Contact
-    url: /contact/
+    url: /contact.html
