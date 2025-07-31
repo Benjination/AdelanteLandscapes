@@ -203,6 +203,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .navbar-brand {
@@ -220,6 +221,11 @@ p {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--primary-color);
+}
+
+/* Navigation Menu - Desktop */
+.navbar-menu {
+  display: block;
 }
 
 .navbar-nav {
@@ -248,8 +254,18 @@ p {
   display: none;
   background: none;
   border: none;
-  padding: 5px;
+  padding: 8px;
   cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .icon-bar {
@@ -257,8 +273,9 @@ p {
   width: 25px;
   height: 3px;
   background-color: var(--text-color);
-  margin: 5px 0;
-  transition: var(--transition);
+  margin: 0;
+  transition: all 0.3s ease;
+  border-radius: 2px;
 }
 
 /* ===== Hero Section ===== */
@@ -987,25 +1004,58 @@ section h2::after {
     top: 100%;
     left: 0;
     right: 0;
-    background-color: #B2D8B2;
-    box-shadow: var(--shadow);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 15px 15px;
+    z-index: 1000;
   }
   
   .navbar-menu.show {
     display: block;
+    animation: slideDown 0.3s ease-out;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   
   .navbar-nav {
     flex-direction: column;
     padding: 1rem;
+    margin: 0;
+    list-style: none;
   }
   
   .nav-item {
     margin: 0.5rem 0;
+    text-align: center;
+  }
+  
+  .nav-link {
+    display: block;
+    padding: 1rem;
+    color: white !important;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white !important;
   }
   
   .navbar-toggle {
-    display: block;
+    display: flex;
   }
   
   .hero-content h1 {
