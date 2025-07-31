@@ -1,7 +1,7 @@
 # Local development configuration
 # This overrides _config.yml settings for local development
 
-# Remove baseurl for local development
+# Keep baseurl empty for local development
 baseurl: ""
 url: "http://localhost:4005"
 
