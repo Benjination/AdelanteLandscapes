@@ -114,21 +114,41 @@
     // Mobile menu toggle function
     function toggleMobileMenu() {
       const navbar = document.getElementById('navbar-menu');
-      navbar.classList.toggle('show');
+      if (navbar) {
+        const isShowing = navbar.classList.contains('show');
+        navbar.classList.toggle('show');
+        
+        // Debug info for testing
+        console.log('Menu toggled:', !isShowing ? 'OPEN' : 'CLOSED');
+        console.log('Show class present:', navbar.classList.contains('show'));
+      } else {
+        console.error('navbar-menu element not found!');
+      }
     }
     
-    // Also add click listener for compatibility
+    // Ensure the toggle works
     document.addEventListener('DOMContentLoaded', function() {
       const toggle = document.querySelector('.navbar-toggle');
+      const navbar = document.getElementById('navbar-menu');
+      
+      console.log('DOM loaded - Toggle button:', toggle);
+      console.log('DOM loaded - Navbar:', navbar);
+      
+      // Make sure the hamburger button is visible for testing
       if (toggle) {
-        toggle.addEventListener('click', toggleMobileMenu);
+        toggle.style.display = 'flex';
+        toggle.style.position = 'relative';
+        toggle.style.zIndex = '9999';
       }
       
       // Close mobile menu when clicking on nav links
       const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
       navLinks.forEach(link => {
         link.addEventListener('click', () => {
-          document.getElementById('navbar-menu').classList.remove('show');
+          if (navbar) {
+            navbar.classList.remove('show');
+            console.log('Menu closed via nav link click');
+          }
         });
       });
     });
