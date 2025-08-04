@@ -1091,8 +1091,8 @@ section h2::after {
 
 /* ===== Homepage Design Showcase Image ===== */
 .design-showcase {
-  max-width: 1000px;
-  width: 100%;
+  max-width: 1200px !important;
+  width: 100% !important;
   height: auto;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -1106,6 +1106,6 @@ section h2::after {
 /* Make design image smaller on mobile */
 @media (max-width: 768px) {
   .design-showcase {
-    max-width: 750px;
+    max-width: 800px !important;
   }
 }
