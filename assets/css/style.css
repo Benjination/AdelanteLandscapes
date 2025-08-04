@@ -599,7 +599,7 @@ section h2::after {
   background: rgba(0, 0, 0, 0.5);
   padding: 0.5rem 1rem;
   border-radius: 20px;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 }
 
 @media (max-width: 768px) {

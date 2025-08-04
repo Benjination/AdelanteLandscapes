@@ -7,12 +7,12 @@
 ✅ 7. On pictures, remove the word Garden
 ✅ 8. Make selfie picture smaller.
 ✅ 9. Prioritize landscaping design non-edible
-10. On consultation change selfie to design
-11. On About, change to picture with carrots. 
-12. Remove carrot from Contact page or replace with design 
+✅ 10. On consultation change selfie to design (Rislov3.JPG)
+✅ 11. On About, change to picture with carrots (updated to cropped Cheryl photo)
+✅ 12. Remove carrot from Contact page or replace with design (replaced with Rislov2.JPG)
 13. Organize pictures into individual projects. 
 ✅ 14. Make images expand on click to look more closely wihtout text. 
-15. Make image text smaller. 
+✅ 15. Make image text smaller (reduced lightbox counter from 0.9rem to 0.7rem)
 16. 
 
 === WORK ANALYSIS & BILLING BREAKDOWN ===
