@@ -1,7 +1,6 @@
 1. Photo on homepage, make design instead of selfie. 
 2. Transform your space paragraph centered. 
 3. Design Consultation button -> git rid of button
-4. Make consultation clickable (Maybe)
 5. Professional Design consultation centered and widen to make full sentences.
 6. Combine Garden and edible gardens tabs, call it edible gardens, and wall to this catagory and move all the way right. 
 7. On pictures, remove the word Garden
