@@ -1,0 +1,81 @@
+1. Photo on homepage, make design instead of selfie. 
+2. Transform your space paragraph centered. 
+3. Design Consultation button -> git rid of button
+4. Make consultation clickable (Maybe)
+5. Professional Design consultation centered and widen to make full sentences.
+6. Combine Garden and edible gardens tabs, call it edible gardens, and wall to this catagory and move all the way right. 
+7. On pictures, remove the word Garden
+8. Make selfie picture smaller.
+9. Prioritize landscaping design non-edible
+10. On consultation change selfie to design
+11. On About, change to picture with carrots. 
+12. Remove carrot from Contact page or replace with design 
+13. Organize pictures into individual projects. 
+14. Make images expand on click to look more closely wihtout text. 
+15. Make image text smaller. 
+16. 
+
+=== WORK ANALYSIS & BILLING BREAKDOWN ===
+Date: August 1, 2025
+Rate: $20/hour
+
+COMPLETED WORK:
+- Mobile hamburger menu functionality (debugging, CSS fixes, JavaScript optimization) - 4 hours
+- Site deployment setup and troubleshooting (GitHub Pages, git workflow) - 2 hours
+- Code structure analysis and file organization guidance - 1 hour
+Total Completed: 7 hours = $140
+
+REMAINING WORK ESTIMATE:
+
+CONTENT & LAYOUT CHANGES (Items 1-12):
+- Replace homepage selfie with design image - 0.5 hours
+- Center "Transform your space" paragraph - 0.25 hours  
+- Remove/modify consultation button styling - 0.5 hours
+- Make consultation clickable (conditional) - 0.5 hours
+- Center and widen consultation text - 0.25 hours
+- Reorganize portfolio categories (combine gardens, reorder) - 1 hour
+- Remove "Garden" text from image captions - 0.5 hours
+- Resize selfie pictures across pages - 0.5 hours
+- Prioritize non-edible landscaping content - 1 hour
+- Replace consultation page selfie - 0.25 hours
+- Change About page to carrot picture - 0.25 hours
+- Update Contact page image - 0.25 hours
+Subtotal: 5.5 hours
+
+ADVANCED FEATURES (Items 13-15):
+- Organize images into individual project galleries - 3 hours
+- Implement image lightbox/modal expansion - 2 hours
+- Reduce image caption text size globally - 0.5 hours
+Subtotal: 5.5 hours
+
+TESTING & DEPLOYMENT:
+- Cross-browser testing and mobile responsiveness - 1 hour
+- Final deployment and verification - 0.5 hours
+Subtotal: 1.5 hours
+
+EXTERNAL/INFRASTRUCTURE WORK:
+- GitHub repository setup and configuration - 1 hour
+- GitHub Pages deployment configuration and custom domain setup - 1.5 hours
+- Contact form integration (CREATE NEW Formspree account & forms, update website, testing) - 1.5 hours
+- SSL certificate and domain DNS configuration - 1 hour
+- Analytics setup (Google Analytics or similar) - 0.5 hours
+- SEO optimization (meta tags, sitemap, search console) - 1 hour
+- Email/hosting account coordination - 0.5 hours
+- Client training on content updates and Git workflow - 1.5 hours
+- Documentation creation (how to update content, deploy changes) - 1 hour
+Subtotal: 9.5 hours
+
+TOTAL REMAINING WORK: 22 hours = $440
+TOTAL PROJECT COST: $140 (completed) + $440 (remaining) = $580
+
+PHASE RECOMMENDATIONS:
+Phase 1 (Priority): Content & Layout Changes - $110 (5.5 hours)
+Phase 2 (Infrastructure): External/Infrastructure Setup - $200 (10 hours)
+Phase 3 (Enhancement): Advanced Features - $110 (5.5 hours) 
+Phase 4 (Finalization): Testing & Deployment - $30 (1.5 hours)
+
+NOTES:
+- Contact form may require ongoing monthly fees ($5-10/month for Formspree Pro)
+- Domain/hosting costs are separate from development work
+- Some infrastructure work can be done in parallel with content changes
+- Client training phase ensures long-term independence 
