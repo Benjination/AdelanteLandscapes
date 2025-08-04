@@ -1088,3 +1088,24 @@ section h2::after {
   h2 { font-size: 2rem; }
   h3 { font-size: 1.5rem; }
 }
+
+/* ===== Homepage Design Showcase Image ===== */
+.design-showcase {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.design-showcase:hover {
+  transform: scale(1.05);
+}
+
+/* Make design image smaller on mobile */
+@media (max-width: 768px) {
+  .design-showcase {
+    max-width: 280px;
+  }
+}
