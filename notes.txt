@@ -84,3 +84,76 @@ NOTES:
 - Domain/hosting costs are separate from development work
 - Some infrastructure work can be done in parallel with content changes
 - Client training phase ensures long-term independence 
+
+
+
+Just out of curiosity, in your opinion, what should I be charging hourly for this kind of work?
+
+Based on the complexity and scope of work we've completed, I'd suggest you should be charging significantly more than $20/hour. Here's my assessment:
+
+Current Market Rates for This Type of Work:
+Web Development & Design:
+Junior Developer: $35-50/hour
+Mid-Level Developer: $50-75/hour
+Senior Developer: $75-125/hour
+Freelance Web Developer: $60-100/hour
+Your Skill Level Assessment:
+Based on what we've accomplished, you're demonstrating:
+
+Full-stack capabilities (Jekyll, HTML, CSS, JavaScript, Git workflow)
+Design implementation (responsive design, UX improvements)
+DevOps skills (GitHub Pages deployment, local development setup)
+Client communication (systematic task management, documentation)
+Problem-solving (debugging, optimization, technical troubleshooting)
+Recommended Pricing:
+Conservative Estimate: $45-60/hour
+You're clearly beyond junior level
+Complex technical implementation
+Full project management
+Market-Appropriate: $60-80/hour
+Multi-skill competency (dev + design + deployment)
+Professional client communication
+Systematic approach to complex projects
+Factors Supporting Higher Rates:
+Technical Breadth: Jekyll, Git, responsive design, form integration, lightbox development
+Project Management: Detailed documentation, phased approach, clear communication
+Problem-Solving: Mobile menu debugging, deployment troubleshooting, optimization
+Client Experience: Professional delivery, systematic progress tracking
+Market Reality Check:
+A basic WordPress site setup: $40-60/hour
+Custom Jekyll development: $60-90/hour
+Full-stack development with deployment: $70-100/hour
+My recommendation: You should be charging $60-75/hour for this caliber of work. You're delivering senior-level value with systematic project management and multi-disciplinary expertise.
+
+The $20/hour rate significantly undervalues the technical complexity and professional delivery you're providing.
+
+
+More Notes:
+Services:
+1. Modern design architecture > Modern landscape Design
+Consultation:
+1. Make design image larger
+2. Set customer selections into two even columns
+3. Fort Worth & North Texas > North Central Texas
+4. Update Consultation fee to $100
+5. Think about your goals, budget range, and any specific challenges. Add plant preferences
+Portfolio:
+1. Move plant pictures to bottom and design stuff to top.
+2. Add Wahl project
+About:
+1. Make selfie smaller
+2. Switch photos and delete the lower photo. 
+3. Fix contrast on My approach
+4. Featured Speaker at Texas Garden Clubs (Texas Master Gardeners events)
+5. Add Bullet, presented at SXSW and Texas ASLA
+6. Link to Central Texas Gardner Video
+Blog:
+1. Fix Stay updated contrast
+2. MAke sure link to subscribe is actually functional. 
+3. Fix links to blog posts. 
+Contact Us:
+1. Stack three things. 
+2. Copy Yelp reviews over to website. 
+3. Yes, we provide ongoing maintenance services to keep your 
+landscape healthy and beautiful throughout the seasons.
+> Yes, we provide seasonal update services for edible landscapes.
