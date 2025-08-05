@@ -4,7 +4,7 @@ title: "How to Create an Edible Landscape - Part Two: Clearing"
 date: 2025-03-15
 categories: [edible-landscaping, preparation, clearing]
 excerpt: "So, here we go! Plan in hand; I am filled with enthusiasm to implement my edible landscape design. Where to begin? As you can see from my last post, there are some issues that need to be dealt with from the beginning."
-featured_image: "/assets/images/Projects/Garden/Garden4.JPG"
+featured_image: "/assets/images/portfolio/Edible Gardens/Garden4.JPG"
 series: "Edible Landscape Series"
 ---
 
