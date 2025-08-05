@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# XML Sitemap
+Sitemap: https://adelantelandscapes.com/sitemap.xml
+
+# Priority pages for indexing
+Allow: /services/
+Allow: /portfolio/
+Allow: /about/
+Allow: /consultation/
+Allow: /blog/
+Allow: /contact/
+
+# Block unnecessary files
+Disallow: /assets/css/
+Disallow: /assets/js/
+Disallow: /_site/
+Disallow: /notes.txt
+Disallow: /Gemfile
+Disallow: /package.json

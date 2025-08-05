@@ -2,10 +2,25 @@
 title: Adelante Landscapes
 email: cbeesley1717@gmail.com
 description: >-
-  Designing beautiful landscapes for your home, business, or community.
-  Specializing in edible landscaping, sustainable design, and naturalistic gardens.
+  Professional landscape design in North Texas specializing in edible gardens, native plants, and sustainable landscaping. 
+  Serving Dallas, Fort Worth, Plano, and surrounding areas with 30+ years of experience.
 baseurl: ""
 url: "https://adelantelandscapes.com"
+
+# SEO settings
+author: "Cheryl Beesley"
+logo: "/assets/images/Logo.jpg"
+social:
+  name: "Adelante Landscapes"
+  links:
+    - "https://adelantelandscapes.com"
+
+# Location information for local SEO
+location:
+  name: "North Texas"
+  region: "Texas"
+  country: "US"
+  phone: "(682)225-3486"
 
 # Build settings
 markdown: kramdown

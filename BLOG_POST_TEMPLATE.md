@@ -9,11 +9,55 @@ Copy this template to create new blog posts. Save files in the `_posts` director
 ```markdown
 ---
 layout: post
-title: "Your Blog Post Title Here"
+title: "Your SEO-Optimized Blog Post Title | North Texas Gardening"
 date: 2025-08-04 10:00:00 -0500
 categories: [gardening, maintenance]  # Choose from: gardening, maintenance, design, edible, sustainable, native, seasonal
-excerpt: "A brief description of your post that will appear in previews and search results. Keep it under 160 characters for best SEO."
+excerpt: "Write a compelling 140-character description that includes your target keyword for North Texas gardening or landscaping."
 featured_image: "/assets/images/portfolio/Edible Gardens/YourImage.jpg"  # Optional - remove line if no image
+keywords: "north texas gardening, dallas landscaping, edible garden design, native plants texas, sustainable landscaping dallas"
+---
+
+## SEO-Optimized Introduction
+
+Start with your target keyword naturally in the first paragraph. For example: "North Texas gardening presents unique challenges, but with the right approach, you can create a thriving landscape that works with our climate."
+
+## Location-Specific Content
+
+Always include references to:
+- **North Texas, Dallas, Fort Worth** - for local SEO
+- **Specific challenges** (clay soil, heat, drought)
+- **Seasonal timing** relevant to our area
+- **Local plant varieties** that work here
+
+### Use H2 and H3 Headers with Keywords
+
+Headers help search engines understand your content structure. Include keywords naturally:
+
+### "Best Native Plants for North Texas Gardens"
+### "Dallas Area Soil Preparation Tips"
+### "Seasonal Planting Guide for DFW"
+
+## Include Practical Local Advice
+
+- **Mention specific months** ("In North Texas, plant warm-season vegetables in April...")
+- **Reference local conditions** ("Our clay soil requires...")
+- **Include nearby cities** when relevant (Dallas, Plano, Frisco, etc.)
+
+## Internal Linking
+
+Link to other pages on your site:
+- "Learn more about our [landscape design services]({{ site.baseurl }}/services/)"
+- "View examples in our [portfolio]({{ site.baseurl }}/portfolio/)"
+- "Read about [sustainable design principles]({{ site.baseurl }}/blog/previous-post/)"
+
+## Call to Action with Location
+
+End with location-specific calls to action:
+
+**For North Texas residents ready to transform their landscape:**
+- "Need help with your Dallas area garden? [Contact us]({{ site.baseurl }}/contact/) for personalized advice."
+- "Ready to create an edible landscape in North Texas? [Schedule a consultation]({{ site.baseurl }}/consultation/) for $100."
+
 ---
 
 ## Introduction
