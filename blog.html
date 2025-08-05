@@ -21,9 +21,9 @@ description: Read our latest insights on edible landscaping, sustainable gardeni
         <p class="lead">Discover practical tips, seasonal advice, and design inspiration for creating beautiful, productive landscapes that thrive in the Texas climate.</p>
       </div>
       <div class="col-md-4">
-        <div class="blog-subscribe" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2rem; border-radius: 15px;">
-          <h4>Stay Updated</h4>
-          <p>Get our latest gardening tips and design insights delivered to your inbox.</p>
+        <div class="blog-subscribe" style="background: linear-gradient(135deg, #2c5530 0%, #3a6b3f 100%); padding: 2rem; border-radius: 15px; color: white;">
+          <h4 style="color: white;">Stay Updated</h4>
+          <p style="color: rgba(255,255,255,0.9);">Get our latest gardening tips and design insights delivered to your inbox.</p>
           <a href="{{ site.baseurl }}/contact/" class="btn btn-primary">Subscribe to Updates</a>
         </div>
       </div>
@@ -34,56 +34,36 @@ description: Read our latest insights on edible landscaping, sustainable gardeni
 <!-- Featured Articles -->
 <section class="featured-articles">
   <div class="container">
-    <h2>Featured Articles</h2>
+    <h2>Latest Articles</h2>
     <div class="blog-grid">
       
-      <!-- Featured Article 1 -->
-      <article class="blog-card featured">
+      {% assign featured_posts = site.posts | limit: 6 %}
+      {% for post in featured_posts %}
+      <article class="blog-card {% if forloop.first %}featured{% endif %}">
         <div class="blog-image">
-          <img src="{{ site.baseurl }}/assets/images/portfolio/Edible Gardens/Tomato.jpg" alt="Growing Tomatoes in Texas">
+          {% if post.featured_image %}
+            <img src="{{ site.baseurl }}{{ post.featured_image }}" alt="{{ post.title }}">
+          {% else %}
+            {% assign fallback_images = "portfolio/Edible Gardens/Tomato.jpg,portfolio/Naturalistic/DryCreek1.JPG,portfolio/Edible Gardens/Lavender.jpeg,portfolio/Modern/Austin1.JPG,portfolio/Edible Gardens/SwissChard.jpg,portfolio/Naturalistic/CourtyardGarden.jpeg" | split: "," %}
+            {% assign image_index = forloop.index0 | modulo: fallback_images.size %}
+            <img src="{{ site.baseurl }}/assets/images/{{ fallback_images[image_index] }}" alt="{{ post.title }}">
+          {% endif %}
         </div>
         <div class="blog-content">
           <div class="blog-meta">
-            <span class="blog-date">March 15, 2024</span>
-            <span class="category-tag">Edible Gardening</span>
+            <span class="blog-date">{{ post.date | date: "%B %d, %Y" }}</span>
+            {% if post.categories %}
+              {% for category in post.categories limit:1 %}
+                <span class="category-tag">{{ category | replace: '-', ' ' | capitalize }}</span>
+              {% endfor %}
+            {% endif %}
           </div>
-          <h3>The Ultimate Guide to Growing Tomatoes in North Texas</h3>
-          <p>Learn the secrets to growing abundant, flavorful tomatoes in the challenging Texas climate. From variety selection to seasonal care tips.</p>
-          <a href="#" class="read-more">Read Full Article →</a>
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+          <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read Full Article →</a>
         </div>
       </article>
-      
-      <!-- Featured Article 2 -->
-      <article class="blog-card">
-        <div class="blog-image">
-          <img src="{{ site.baseurl }}/assets/images/portfolio/Naturalistic/DryCreek1.JPG" alt="Water-Wise Landscaping">
-        </div>
-        <div class="blog-content">
-          <div class="blog-meta">
-            <span class="blog-date">February 28, 2024</span>
-            <span class="category-tag">Sustainable Design</span>
-          </div>
-          <h3>Creating Water-Wise Landscapes That Thrive</h3>
-          <p>Discover how to design beautiful landscapes that conserve water and reduce maintenance while providing year-round interest.</p>
-          <a href="#" class="read-more">Read Full Article →</a>
-        </div>
-      </article>
-      
-      <!-- Featured Article 3 -->
-      <article class="blog-card">
-        <div class="blog-image">
-          <img src="{{ site.baseurl }}/assets/images/portfolio/Edible Gardens/Lavender.jpeg" alt="Native Plants Texas">
-        </div>
-        <div class="blog-content">
-          <div class="blog-meta">
-            <span class="blog-date">February 10, 2024</span>
-            <span class="category-tag">Native Plants</span>
-          </div>
-          <h3>Top 10 Native Texas Plants for Every Garden</h3>
-          <p>Essential native plants that provide beauty, support wildlife, and thrive in Texas conditions with minimal care.</p>
-          <a href="#" class="read-more">Read Full Article →</a>
-        </div>
-      </article>
+      {% endfor %}
       
     </div>
   </div>
@@ -94,49 +74,31 @@ description: Read our latest insights on edible landscaping, sustainable gardeni
   <div class="container">
     <h2>Explore by Topic</h2>
     <div class="category-grid">
-      <div class="category-item">
-        <h3>🍅 Edible Landscaping</h3>
-        <p>Growing food in beautiful landscape designs</p>
-        <ul>
-          <li>Vegetable garden planning</li>
-          <li>Fruit tree care</li>
-          <li>Herb garden design</li>
-          <li>Seasonal planting guides</li>
-        </ul>
-      </div>
-      
-      <div class="category-item">
-        <h3>🌱 Sustainable Gardening</h3>
-        <p>Eco-friendly practices for healthy gardens</p>
-        <ul>
-          <li>Water conservation</li>
-          <li>Soil health</li>
-          <li>Natural pest control</li>
-          <li>Composting tips</li>
-        </ul>
-      </div>
-      
-      <div class="category-item">
-        <h3>🌵 Native Plants</h3>
-        <p>Texas natives for beautiful, low-maintenance landscapes</p>
-        <ul>
-          <li>Plant selection guides</li>
-          <li>Wildlife benefits</li>
-          <li>Seasonal care</li>
-          <li>Design inspiration</li>
-        </ul>
-      </div>
-      
-      <div class="category-item">
-        <h3>🎨 Design Inspiration</h3>
-        <p>Ideas and trends for stunning outdoor spaces</p>
-        <ul>
-          <li>Modern landscape trends</li>
-          <li>Color combinations</li>
-          <li>Layout planning</li>
-          <li>Problem-solving designs</li>
-        </ul>
-      </div>
+      {% assign all_categories = site.categories | sort %}
+      {% for category in all_categories %}
+        <div class="category-item">
+          <h3>
+            {% if category[0] == 'gardening' %}🌱
+            {% elsif category[0] == 'maintenance' %}🛠️
+            {% elsif category[0] == 'design' %}🎨
+            {% elsif category[0] == 'edible' %}🍅
+            {% elsif category[0] == 'sustainable' %}♻️
+            {% elsif category[0] == 'native' %}🌵
+            {% else %}📝
+            {% endif %}
+            {{ category[0] | replace: '-', ' ' | capitalize }}
+          </h3>
+          <p>{{ category[1] | size }} article{% if category[1].size != 1 %}s{% endif %}</p>
+          <ul>
+            {% for post in category[1] limit:4 %}
+              <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title | truncate: 40 }}</a></li>
+            {% endfor %}
+          </ul>
+          {% if category[1].size > 4 %}
+            <p><small><a href="#" onclick="showCategory('{{ category[0] }}')">View all {{ category[1].size }} articles →</a></small></p>
+          {% endif %}
+        </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -144,57 +106,74 @@ description: Read our latest insights on edible landscaping, sustainable gardeni
 <!-- Recent Articles -->
 <section class="recent-articles">
   <div class="container">
-    <h2>Recent Articles</h2>
-    <div class="article-list">
-      
-      <article class="article-summary">
-        <div class="article-meta">
-          <span class="date">March 1, 2024</span>
-          <span class="category">Seasonal Care</span>
-        </div>
-        <h3><a href="#">Spring Garden Preparation: A Texas Checklist</a></h3>
-        <p>Essential tasks to prepare your garden for the growing season, from soil preparation to plant selection.</p>
-      </article>
-      
-      <article class="article-summary">
-        <div class="article-meta">
-          <span class="date">February 15, 2024</span>
-          <span class="category">Problem Solving</span>
-        </div>
-        <h3><a href="#">Dealing with Clay Soil: Solutions for North Texas Gardens</a></h3>
-        <p>Practical strategies for improving clay soil and selecting plants that thrive in heavy soil conditions.</p>
-      </article>
-      
-      <article class="article-summary">
-        <div class="article-meta">
-          <span class="date">January 30, 2024</span>
-          <span class="category">Design</span>
-        </div>
-        <h3><a href="#">Creating Year-Round Interest in Your Landscape</a></h3>
-        <p>Design strategies for ensuring your garden looks beautiful through all four seasons in Texas.</p>
-      </article>
-      
-      <article class="article-summary">
-        <div class="article-meta">
-          <span class="date">January 15, 2024</span>
-          <span class="category">Edible Gardens</span>
-        </div>
-        <h3><a href="#">Winter Vegetables That Thrive in Texas</a></h3>
-        <p>Extend your growing season with cold-hardy vegetables perfect for Texas winter gardens.</p>
-      </article>
-      
-      <article class="article-summary">
-        <div class="article-meta">
-          <span class="date">December 20, 2023</span>
-          <span class="category">Maintenance</span>
-        </div>
-        <h3><a href="#">Winter Garden Care: Protecting Your Plants</a></h3>
-        <p>Essential winter care tips to keep your landscape healthy through the colder months.</p>
-      </article>
-      
+    <h2>All Articles</h2>
+    
+    <!-- Category Filter -->
+    <div class="category-filter" style="margin-bottom: 2rem; text-align: center;">
+      <button class="filter-btn active" onclick="filterPosts('all')" style="background: var(--primary-color); color: white; border: none; padding: 0.5rem 1rem; margin: 0.25rem; border-radius: 20px; cursor: pointer;">All Posts</button>
+      {% assign categories = site.categories | sort %}
+      {% for category in categories %}
+        <button class="filter-btn" onclick="filterPosts('{{ category[0] }}')" style="background: #f8f9fa; color: #495057; border: 1px solid #dee2e6; padding: 0.5rem 1rem; margin: 0.25rem; border-radius: 20px; cursor: pointer;">{{ category[0] | replace: '-', ' ' | capitalize }} ({{ category[1] | size }})</button>
+      {% endfor %}
     </div>
+    
+    <div class="article-list" id="articleList">
+      {% for post in site.posts %}
+      <article class="article-summary" data-category="{{ post.categories | join: ' ' }}">
+        <div class="article-meta">
+          <span class="date">{{ post.date | date: "%B %d, %Y" }}</span>
+          {% if post.categories %}
+            {% for category in post.categories limit:1 %}
+              <span class="category">{{ category | replace: '-', ' ' | capitalize }}</span>
+            {% endfor %}
+          {% endif %}
+        </div>
+        <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt | strip_html | truncate: 200 }}</p>
+      </article>
+      {% endfor %}
+    </div>
+    
+    {% if site.posts.size == 0 %}
+    <div class="no-posts" style="text-align: center; padding: 3rem; color: #6c757d;">
+      <h3>No blog posts yet</h3>
+      <p>Check back soon for gardening tips and landscape insights!</p>
+    </div>
+    {% endif %}
   </div>
 </section>
+
+<script>
+// Blog post filtering functionality
+function filterPosts(category) {
+  const articles = document.querySelectorAll('.article-summary');
+  const buttons = document.querySelectorAll('.filter-btn');
+  
+  // Update button states
+  buttons.forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+  
+  // Filter articles
+  articles.forEach(article => {
+    if (category === 'all') {
+      article.style.display = 'block';
+    } else {
+      const articleCategories = article.getAttribute('data-category');
+      if (articleCategories && articleCategories.includes(category)) {
+        article.style.display = 'block';
+      } else {
+        article.style.display = 'none';
+      }
+    }
+  });
+}
+
+// Category showcase functionality  
+function showCategory(category) {
+  filterPosts(category);
+  document.getElementById('articleList').scrollIntoView({ behavior: 'smooth' });
+}
+</script>
 
 <!-- Newsletter Signup -->
 <section class="newsletter-signup">
@@ -220,7 +199,7 @@ description: Read our latest insights on edible landscaping, sustainable gardeni
       <h2>Ready to Apply These Ideas to Your Garden?</h2>
       <p>Let's schedule a consultation to discuss how these concepts can work in your specific landscape.</p>
       <div class="cta-buttons">
-        <a href="{{ site.baseurl }}/consultation/" class="btn btn-secondary">Design Consultation ($75)</a>
+        <a href="{{ site.baseurl }}/consultation/" class="btn btn-secondary">Design Consultation ($100)</a>
         <a href="{{ site.baseurl }}/services/" class="btn" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white;">Our Services</a>
       </div>
     </div>

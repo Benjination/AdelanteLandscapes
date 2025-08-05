@@ -4,7 +4,7 @@ title: "How to Create an Edible Landscape - Part One: The Plan"
 date: 2025-03-01
 categories: [edible-landscaping, design, planning]
 excerpt: "The hardest part of any project is starting. I have been putting this blog off for a while, but I thought it might be beneficial for potential edible landscape designers to share in a start to finish edible landscape."
-featured_image: "/assets/images/blog/meadowbrook-plan.jpg"
+featured_image: "/assets/images/portfolio/Edible Gardens/Design3.jpeg"
 series: "Edible Landscape Series"
 ---
 

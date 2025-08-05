@@ -4,7 +4,7 @@ title: "The Hope of a Seed"
 date: 2025-02-01
 categories: [seeds, planting, tips]
 excerpt: "There is nothing more miraculous than a seed. All the potential of creation is packed into a seemingly inert grain of sand. Miracles all around us, sometimes we just don't see it."
-featured_image: "/assets/images/blog/seeds.jpg"
+featured_image: "/assets/images/portfolio/Edible Gardens/Strawberries with Mustard 1.JPG"
 ---
 
 There is nothing more miraculous than a seed. All the potential of creation is packed into a seemingly inert grain of sand. Miracles all around us, sometimes we just don't see it. Over the last couple of weeks, my husband James has been planting pepper and eggplant seeds. Today is tomatoes. Even though we know from years past that these seeds that we so carefully saved in previous seasons will germinate and grow into a lovely plant that will give us many pounds of produce, it is hard to envision the future of this tiny seed as being anything significant at all.

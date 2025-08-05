@@ -4,7 +4,7 @@ title: "Winter in the Edible Garden"
 date: 2025-04-01
 categories: [winter-gardening, plant-selection, weather]
 excerpt: "The garden is a thing of beauty to behold…except when it isn't. With temperatures falling into the twenties and even into the teens for a couple of weeks this last month, all I could do was stare out the window and watch as the water in the cells of my lush greens turn into icicles."
-featured_image: "/assets/images/blog/winter-garden.jpg"
+featured_image: "/assets/images/Projects/Garden/Kale&Lettuce.jpg"
 ---
 
 The garden is a thing of beauty to behold…except when it isn't. With temperatures falling into the twenties and even into the teens for a couple of weeks this last month, all I could do was stare out the window (when I dared to look), and watch as the water in the cells of my lush greens turn into icicles. Last weekend, when I did finally venture out to review the damage, the smell of rotting vegetation was palpable. I set to work with my pruners to see what could be salvaged.
